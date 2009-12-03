@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Token List Demo</title>
+	
+	<link rel="stylesheet" href="demo.css" type="text/css" />	
+	
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="ui-src/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="ui-src/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="ui-src/jquery.ui.menu.js"></script>	
+	<script type="text/javascript" src="ui-src/jquery.ui.autocomplete.js"></script>
+	<script type="text/javascript" src="../src/jquery.ui.tokenlist.js"></script>
+	<script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+	<h1>Token List Demo</h1>
+	
+	<p>Convert a plain text field into a facebook style list builder:</p>
+	
+	<button id="enhance">Enhance</button>
+	<button id="toggle" disabled="disabled">Toggle Original Input</button>
+	
+	<hr/>
+	
+	<label for="test1">With Autocomplete:</label>
+	<input id="test1" type="text" value="one, two, four" class="test autocomplete"/>
+	
+	<hr/>
+
+	<label for="test2">Without:</label>
+	<input id="test2" type="text" value="six, three, zero" class="test"/>
+	
+	<hr/>
+	
+	<label for="test3">Using a UL in the markup:</label>
+	<ul id="test3" class="test autocomplete"></ul>
+
+	<hr/>
+
+	<label for="test4">Disabled:</label>
+	<input id="test4" type="text" value="eight, ten, four, six, nine" class="test" disabled="disabled"/>
+	
+	<hr style="margin:1em 0;color:red"/>
+
+	<div style="font-size:small">
+		<p>Browser Compatibility Tests:</p>
+		<dl>
+			<dt>Linux - Ubuntu 8.10:</dt>
+			<dd><ul>
+				<li>Firefox 3.0.6 - ?</li>
+				<li>Opera 9.63 - ?</li>
+				<li>Konqueror 4.1.3 - ?</li>
+			</ul></dd>
+			<dt>Windows - XP sp3:</dt>
+			<dd><ul>
+				<li>IE 7 - ?</li>
+				<li>IE 6 - ?</li>
+				<li>Safari 3.1.2 - ?</li>
+				<li>Chrome 1.0.154.48 - ?</li>
+			</ul></dd>
+			<dt>UserAgent:</dt>
+			<dd><script type="text/javascript">document.write(window.navigator.userAgent);</script></dd>
+		</dl>
+		<p><a href="javascript:var firebug=document.createElement('script');firebug.setAttribute('src','http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);">Firebug Lite</a></p>
+	</div>
+	
+	<hr />
+	
+	<p>
+		<a href="http://validator.w3.org/check?uri=referer"><img
+			src="http://www.w3.org/Icons/valid-xhtml10"
+			alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+	</p>
+</body>
+</html>
+

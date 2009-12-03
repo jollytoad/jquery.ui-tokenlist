@@ -1,0 +1,44 @@
+
+.ui-tokenlist {
+	padding: 1px;
+	margin: 0;
+	height: auto !important;
+	height: 1%;
+	list-style-position: outside;
+	list-style: none;
+}
+.ui-tokenlist .ui-tokenlist-item,
+.ui-tokenlist .ui-tokenlist-input {
+	float: left;
+	margin: 1px;
+	padding: 1px 2px 2px 5px;
+}
+.ui-tokenlist .ui-tokenlist-input {
+	padding-left: 4px;
+}
+.ui-tokenlist .ui-tokenlist-input input {
+	float: left;
+	padding: 1px;
+	border: none;
+	background: none;
+}
+.ui-tokenlist .ui-tokenlist-label {
+	float: left;
+}
+.ui-tokenlist .ui-tokenlist-remove {
+	float: right;
+	cursor: pointer;
+}
+
+/* IE fixes */
+/*
+body.msie .ui-tokenlist li {
+	padding-top: 0;
+	vertical-align: middle;
+}
+body.msie .ui-tokenlist li button {
+	float: none;
+	margin-left: 1ex;
+	margin-top: 2px;
+}
+*/
