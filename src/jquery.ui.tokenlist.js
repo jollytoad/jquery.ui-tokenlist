@@ -14,6 +14,10 @@ $.widget('ui.tokenlist', {
 	_init: function() {
 		var self = this, key = $.ui.keyCode;
 
+		if ( !this.options.items ) {
+			this.options.items = [];
+		}
+
 		if (this.element.is(':text')) {
 			this.textElem = this.element;
 
@@ -191,7 +195,7 @@ $.widget('ui.tokenlist', {
 				if ($.isArray(validate)) {
 					if ($.inArray(item, validate) < 0) { return; }
 				} else if ($.isFunction(validate)) {
-					if (!validate.apply(self, item)) { return; }
+					if (!validate.call(self, item)) { return; }
 				}
 			}
 
@@ -250,7 +254,9 @@ $.widget('ui.tokenlist', {
 
 	_change: function() {
 		if (this.textElem) {
-			this.textElem.val(this._stringify(this.items()));
+			this.textElem
+				.val(this._stringify(this.items()))
+				.trigger('change');
 		}
 		this.element.trigger('change');
 	}
@@ -265,7 +271,6 @@ $.extend($.ui.tokenlist, {
 		join: ', ',
 		removeTip: "Remove Item",
 		duplicates: false,
-		items: [],
 		validate: false // Maybe false, an array of allowed values, or a validation function
 	}
 });
